@@ -1,36 +1,36 @@
-﻿namespace TicketClassLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TicketClassLibrary
 {
     /// <summary>
-    /// A representation of motorcycles needing to be ticketed.
+    /// The base class for all vehicles. Keep in mind, this is abstract and must be inherited.
     /// </summary>
-    public class MC : Vehicle
+    public abstract class Vehicle
     {
         /// <summary>
-        /// The unique license plate, used for identifying the vehicle
+        /// The unique license plate, used for identifying the vehicle.
         /// </summary>
-        public string Licenseplate { get { return base.Licenseplate; } set { base.Licenseplate = value; } }
+        protected string Licenseplate { get; set; }
 
         /// <summary>
         /// The date at which the vehicle has crossed, given as a DateTime object.
         /// </summary>
-        public DateTime Date { get { return base.Date; } set { base.Date = value; } }
-
+        protected DateTime Date { get; set; }
 
         /// <summary>
         /// Calculates the price for this vehicle's crossing.
         /// </summary>
         /// <returns>The crossing's price, in dkk</returns>
-        public override double Price()
-        {
-            return 125;
-        }
+        public abstract double Price();
+
         /// <summary>
         /// Returns the type of vehicle, for categorization
         /// </summary>
         /// <returns>A string signifying the type of vehicle</returns>
-        public override string VehicleType()
-        {
-            return "MC";
-        }
+        public abstract string VehicleType();
     }
 }

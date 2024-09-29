@@ -28,7 +28,7 @@ namespace TicketClassLibrary.Tests
             //arrange
             MC m2 = new MC();
             //act
-            string m2vehicle = m2.Vehicle();
+            string m2vehicle = m2.VehicleType();
             //assert
             Assert.AreEqual(m2vehicle, "MC");
         }

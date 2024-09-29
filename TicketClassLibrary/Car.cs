@@ -3,23 +3,23 @@
     /// <summary>
     /// A representation of cars needing to be ticketed.
     /// </summary>
-    public class Car
+    public class Car : Vehicle
     {
         /// <summary>
         /// The unique license plate, used for identifying the vehicle
         /// </summary>
-        public string Licenseplate { get; set; }
+        public string Licenseplate { get { return base.Licenseplate; } set { base.Licenseplate = value; } }
 
         /// <summary>
         /// The date at which the vehicle has crossed, given as a DateTime object.
         /// </summary>
-        public DateTime Date { get; set; }
+        public DateTime Date { get { return base.Date; } set { base.Date = value; } }
 
         /// <summary>
         /// Calculates the price for this vehicle's crossing.
         /// </summary>
         /// <returns>The crossing's price, in dkk</returns>
-        public double Price()
+        public override double Price()
         {
             return 240;
         }
@@ -27,7 +27,7 @@
         /// Returns the type of vehicle, for categorization
         /// </summary>
         /// <returns>A string signifying the type of vehicle</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
