@@ -15,7 +15,7 @@ namespace TicketClassLibrary
         /// <summary>
         /// The unique license plate, used for identifying the vehicle.
         /// </summary>
-        protected string Licenseplate { get { return licenseplate; } set 
+        public string Licenseplate { get { return licenseplate; } set 
             {
                 if (value.Length > 7)
                 {
@@ -30,11 +30,11 @@ namespace TicketClassLibrary
         /// <summary>
         /// Specifies whether Brobizz was used, and consequently, if a discount should be applied
         /// </summary>
-        protected bool Brobizz { get; set; }
+        public bool Brobizz { get; set; }
         /// <summary>
         /// The date at which the vehicle has crossed, given as a DateTime object.
         /// </summary>
-        protected DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// Calculates the price for this vehicle's crossing.
