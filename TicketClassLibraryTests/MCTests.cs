@@ -32,5 +32,26 @@ namespace TicketClassLibrary.Tests
             //assert
             Assert.AreEqual(m2vehicle, "MC");
         }
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void LicensePlateTest_Invalid_LongerThan7Characters()
+        {
+            //arrange
+            MC m3 = new MC();
+            //act
+            m3.Licenseplate = "12345678";
+            //assert
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void LicensePlateTest_Valid_7Characters()
+        {
+            //arrange
+            MC m3 = new MC();
+            //act
+            m3.Licenseplate = "1234567";
+            //assert
+            Assert.AreEqual(m3.Licenseplate, "1234567");
+        }
     }
 }

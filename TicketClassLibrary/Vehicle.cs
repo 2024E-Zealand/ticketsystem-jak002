@@ -11,10 +11,21 @@ namespace TicketClassLibrary
     /// </summary>
     public abstract class Vehicle
     {
+        private string licenseplate;
         /// <summary>
         /// The unique license plate, used for identifying the vehicle.
         /// </summary>
-        protected string Licenseplate { get; set; }
+        protected string Licenseplate { get { return licenseplate; } set 
+            {
+                if (value.Length > 7)
+                {
+                    throw new ArgumentException("License plate too long");
+                } else
+                {
+                    licenseplate = value;
+                }
+            }
+        }
 
         /// <summary>
         /// The date at which the vehicle has crossed, given as a DateTime object.
