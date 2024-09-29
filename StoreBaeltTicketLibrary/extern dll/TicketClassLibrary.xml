@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:TicketClassLibrary.Car">
+            <summary>
+            A representation of cars needing to be ticketed.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Car.Licenseplate">
+            <summary>
+            The unique license plate, used for identifying the vehicle
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Car.Date">
+            <summary>
+            The date at which the vehicle has crossed, given as a DateTime object.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Car.Brobizz">
+            <summary>
+            Specifies whether Brobizz was used, and consequently, if a discount should be applied
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Car.Price">
+            <summary>
+            Calculates the price for this vehicle's crossing.
+            </summary>
+            <returns>The crossing's price, in dkk</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.VehicleType">
+            <summary>
+            Returns the type of vehicle, for categorization
+            </summary>
+            <returns>A string signifying the type of vehicle</returns>
+        </member>
+        <member name="T:TicketClassLibrary.MC">
+            <summary>
+            A representation of motorcycles needing to be ticketed.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.MC.Licenseplate">
+            <summary>
+            The unique license plate, used for identifying the vehicle
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.MC.Date">
+            <summary>
+            The date at which the vehicle has crossed, given as a DateTime object.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.MC.Brobizz">
+            <summary>
+            Specifies whether Brobizz was used, and consequently, if a discount should be applied
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.MC.Price">
+            <summary>
+            Calculates the price for this vehicle's crossing.
+            </summary>
+            <returns>The crossing's price, in dkk</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.VehicleType">
+            <summary>
+            Returns the type of vehicle, for categorization
+            </summary>
+            <returns>A string signifying the type of vehicle</returns>
+        </member>
+        <member name="T:TicketClassLibrary.Vehicle">
+            <summary>
+            The base class for all vehicles. Keep in mind, this is abstract and must be inherited.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            The unique license plate, used for identifying the vehicle.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Brobizz">
+            <summary>
+            Specifies whether Brobizz was used, and consequently, if a discount should be applied
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Date">
+            <summary>
+            The date at which the vehicle has crossed, given as a DateTime object.
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.Price">
+            <summary>
+            Calculates the price for this vehicle's crossing.
+            </summary>
+            <returns>The crossing's price, in dkk</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Returns the type of vehicle, for categorization
+            </summary>
+            <returns>A string signifying the type of vehicle</returns>
+        </member>
+    </members>
+</doc>
