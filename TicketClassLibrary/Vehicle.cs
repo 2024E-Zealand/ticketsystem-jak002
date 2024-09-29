@@ -28,6 +28,10 @@ namespace TicketClassLibrary
         }
 
         /// <summary>
+        /// Specifies whether Brobizz was used, and consequently, if a discount should be applied
+        /// </summary>
+        protected bool Brobizz { get; set; }
+        /// <summary>
         /// The date at which the vehicle has crossed, given as a DateTime object.
         /// </summary>
         protected DateTime Date { get; set; }

@@ -23,6 +23,17 @@ namespace TicketClassLibrary.Tests
             //assert
             Assert.AreEqual(c1price, 240);
         }
+        [TestMethod()]
+        public void PriceTest_Valid_228_Brobizz()
+        {
+            //arrange
+            Car c1 = new Car();
+            c1.Brobizz = true;
+            //act
+            double c1price = c1.Price();
+            //assert
+            Assert.AreEqual(c1price, 228,0.01);
+        }
 
         [TestMethod()]
         public void VehicleTypeTest_Valid_Car()

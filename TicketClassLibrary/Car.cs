@@ -16,11 +16,19 @@
         public DateTime Date { get { return base.Date; } set { base.Date = value; } }
 
         /// <summary>
+        /// Specifies whether Brobizz was used, and consequently, if a discount should be applied
+        /// </summary>
+        public bool Brobizz { get { return base.Brobizz; } set { base.Brobizz = value; } }
+        /// <summary>
         /// Calculates the price for this vehicle's crossing.
         /// </summary>
         /// <returns>The crossing's price, in dkk</returns>
         public override double Price()
         {
+            if (Brobizz)
+            {
+                return 240 * 0.95;
+            }
             return 240;
         }
         /// <summary>

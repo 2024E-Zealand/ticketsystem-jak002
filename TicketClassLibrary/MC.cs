@@ -14,7 +14,10 @@
         /// The date at which the vehicle has crossed, given as a DateTime object.
         /// </summary>
         public DateTime Date { get { return base.Date; } set { base.Date = value; } }
-
+        /// <summary>
+        /// Specifies whether Brobizz was used, and consequently, if a discount should be applied
+        /// </summary>
+        public bool Brobizz { get { return base.Brobizz; } set { base.Brobizz = value; } }
 
         /// <summary>
         /// Calculates the price for this vehicle's crossing.
@@ -22,6 +25,10 @@
         /// <returns>The crossing's price, in dkk</returns>
         public override double Price()
         {
+            if (Brobizz)
+            {
+                return 125 * 0.95;
+            }
             return 125;
         }
         /// <summary>

@@ -21,6 +21,17 @@ namespace TicketClassLibrary.Tests
             //assert
             Assert.AreEqual(m1price, 125);
         }
+        [TestMethod()]
+        public void PriceTest_Valid_118dot75_Brobizz()
+        {
+            //arrange
+            MC m1 = new MC();
+            m1.Brobizz = true;
+            //act
+            double m1price = m1.Price();
+            //assert
+            Assert.AreEqual(m1price, 118.75,0.01);
+        }
 
         [TestMethod()]
         public void VehicleTest_Valid_MC()
