@@ -1,50 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicketClassLibrary;
+﻿using TicketClassLibrary;
 
 namespace StoreBaeltTicketLibrary
 {
     /// <summary>
     /// A repository for handling all tickets on Storebælt
     /// </summary>
-    public class StoreBaeltRepository : IStoreBaeltRepository
+    public interface IStoreBaeltRepository
     {
-        /// <summary>
-        /// Static list for holding all tickets
-        /// </summary>
-        private static List<Vehicle> _tickets = new List<Vehicle>();
-
         /// <summary>
         /// STATIC: Adds a single ticket to the repository
         /// </summary>
         /// <param name="ticket">Ticket to be added</param>
         /// <returns>The ticket object if successful, otherwise null</returns>
-        public Vehicle? Add(Vehicle ticket)
-        {
-            _tickets.Add(ticket);
-            return ticket;
-        }
-
+        Vehicle? Add(Vehicle ticket);
         /// <summary>
         /// Returns a list of all tickets added so far
         /// </summary>
         /// <returns>A list of all tickets</returns>
-        public List<Vehicle> GetAll()
-        {
-            return _tickets;
-        }
-
+        List<Vehicle> GetAll();
         /// <summary>
         /// Returns a list of all tickets belonging to a given licenseplate
         /// </summary>
         /// <param name="licensePlate">The license plate to search for</param>
         /// <returns>The aforementioned list if found, otherwise an empty list</returns>
-        public List<Vehicle> GetByLicensePlate(string licensePlate)
-        {
-            return _tickets.FindAll(t => t.Licenseplate == licensePlate);
-        }
+        List<Vehicle> GetByLicensePlate(string licensePlate);
     }
 }
